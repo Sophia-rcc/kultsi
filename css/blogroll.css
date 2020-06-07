@@ -1,0 +1,86 @@
+/*Styles for the blog page*/
+#container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 300px);
+	grid-gap: 4vw;
+	padding: 4vw;
+	justify-content: center;
+	justify-items: center;
+	background: url(../img/one-stripe-thinner.svg) no-repeat;
+	background-size: contain;
+	min-height: 200vh;
+}
+
+#primary-blog {
+	background: url(../img/header-big-circle-rotated.svg) no-repeat;
+	background-position: bottom right;
+	background-size: auto 50%;	
+}
+
+.page-title {
+text-align: center;
+}
+
+.entry-meta {
+	color: #666;
+}
+
+.entry-meta a {
+	text-decoration: none;
+	color: #666;
+}
+
+.entry-title a {
+	text-decoration: none;
+	color: #333;
+}
+
+.entry-title {
+	margin: 0;
+}
+
+.entry-content-blog {
+	text-align: justify;
+	hyphens: auto;
+}
+
+/* Styles for single blog post */
+
+#primary-single {
+
+	background: url(../img/one-stripe-thinner.svg) no-repeat;
+	background-size: contain;
+	background-position: 100% 13%;	
+
+}
+
+.primary-single-content {
+	padding: 4rem 0;
+	margin: 0 5rem 5rem 5rem;
+	
+}
+
+.entry-header {
+	text-align: center;
+}
+
+.post-thumbnail {
+
+	text-align: center;
+}
+
+ .single-post > #page {
+	background: url(../img/header-big-circle-rotated.svg) no-repeat;
+	background-size: auto 50%;
+	background-position: bottom right;
+	margin: 0;
+} 
+
+.single-post-content p {
+	padding: 0 0 1.2rem 0;
+}
+ 
+.nav-links a {
+	font-size: 1.2rem!important;
+	color: #666;
+}
