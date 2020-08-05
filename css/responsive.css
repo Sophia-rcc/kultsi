@@ -1,0 +1,81 @@
+/*LAYOUT AND DESIGN FOR Tablet SCREENS*/
+
+@media only screen and (max-width: 768px) {
+	.post-content {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.row1 > .wp-block-group__inner-container, .row2 > .wp-block-group__inner-container, .row3 > .wp-block-group__inner-container, .row4 > .wp-block-group__inner-container, .row5 > .wp-block-group__inner-container, .row6 > .wp-block-group__inner-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#primary-single {
+		background-size: auto;
+	}
+
+	.widget_nav_menu, .widget_recent_entries {
+		display: none;
+	}
+
+	.wp-image-388 {
+		width: 40%;
+		height: auto;
+		float: none;
+		margin-right: 0;
+	}
+
+	.textwidget p {
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+
+	.textwidget {
+		display: inline-block;
+		text-align: center;
+	}
+
+	.primary-single-content {
+		margin: 0 2rem 2rem 2rem;
+	}
+	
+	.blogposts > .wp-block-group__inner-container {
+		width: 100vw;
+		background-color: #f6e0a0;
+		
+	}
+	
+	#blog {
+		padding-top: 0.5em;
+		margin-bottom: 0;
+	}
+	
+	.front-heading {
+		background-size: 50% auto;
+	}
+	
+}
+
+@media only screen and (max-width: 480px){
+	.front-heading {
+		background-size: 70% auto;
+	}
+	
+	.menu-toggle {
+		margin-left: 91vw;
+	}
+	
+}
+
+@media only screen and (max-width: 584px){
+	.row2 > .wp-block-group__inner-container {
+		background: none;
+	}
+	
+	.row4 {
+		background: none;
+	}
+}
+
