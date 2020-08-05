@@ -100,6 +100,8 @@ if ( ! function_exists( 'kultsifi_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+		
+		
 	}
 endif;
 add_action( 'after_setup_theme', 'kultsifi_setup' );
@@ -136,6 +138,28 @@ function kultsifi_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => 'Footer area one',
+			'id'            => 'footer-area-one',
+			'description'   => 'this widget area description',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => 'Footer area two',
+			'id'            => 'footer-area-two',
+			'description'   => 'this widget area description',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 }
 add_action( 'widgets_init', 'kultsifi_widgets_init' );
 
@@ -145,9 +169,11 @@ add_action( 'widgets_init', 'kultsifi_widgets_init' );
 function kultsifi_scripts() {
 	wp_enqueue_style( 'kultsifi-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'blogroll', get_template_directory_uri() . '/css/blogroll.css',false,'1.1','all');
+	wp_enqueue_style( 'navigation', get_template_directory_uri() . '/css/navigation.css',false,'1.1','all');
+	wp_enqueue_style( 'responsive', get_template_directory_uri() . '/css/responsive.css',false,'1.1','all');
 	wp_style_add_data( 'kultsifi-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'kultsifi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'kultsifi-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), _S_VERSION, true );
 
 	wp_enqueue_script( 'kultsifi-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), _S_VERSION, true );
 	//wp_enqueue_script( 'added-features', get_template_directory_uri() . '/js/added-features.js', array ('jquery'), 1.1, false);

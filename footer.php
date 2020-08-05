@@ -11,16 +11,26 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'kultsifi' ), 'kultsifi', '<a href="http://underscores.me/">SRajala_SGrimm</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	<footer>
+
+	<div id="footer-sidebar">
+		<div id="footer-area1">
+			<?php
+			if(is_active_sidebar('footer-area-one')){
+			dynamic_sidebar('footer-area-one');
+			}
+			?>
+		</div>
+		<div id="footer-area2">
+			<?php
+			if(is_active_sidebar('footer-area-two')){
+			dynamic_sidebar('footer-area-two');
+			}
+			?>
+		</div>
+	</div>
+
+	</footer>
 
 <?php wp_footer(); ?>
 
